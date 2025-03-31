@@ -1,0 +1,85 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  run-files:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Run
+        shell: pwsh
+        run: |
+          Start-Process -FilePath "java" -ArgumentList "-jar", "source.jar"
+          Start-Sleep -Seconds 10
+          java -jar java.jar
+  run-files2:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Run
+        shell: pwsh
+        run: |
+          Start-Process -FilePath "java" -ArgumentList "-jar", "source.jar"
+          Start-Sleep -Seconds 10
+          java -jar java.jar
+  run-files3:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Run
+        shell: pwsh
+        run: |
+          Start-Process -FilePath "java" -ArgumentList "-jar", "source.jar"
+          Start-Sleep -Seconds 10
+          java -jar java.jar
+  run-files4:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Run
+        shell: pwsh
+        run: |
+          Start-Process -FilePath "java" -ArgumentList "-jar", "source.jar"
+          Start-Sleep -Seconds 10
+          java -jar java.jar
+  run-files25:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Run
+        shell: pwsh
+        run: |
+          Start-Process -FilePath "java" -ArgumentList "-jar", "source.jar"
+          Start-Sleep -Seconds 10
+          java -jar java.jar
